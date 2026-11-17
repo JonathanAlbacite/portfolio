@@ -224,7 +224,8 @@ section {
   position: relative;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  height: clamp(640px, 92vh, 800px);
+  min-height: clamp(600px, 92vh, 820px);
+  min-height: clamp(600px, 92svh, 820px);
   overflow: hidden;
 }
 
@@ -232,7 +233,8 @@ section {
   position: relative;
   z-index: 2;
   align-self: center;
-  padding: 110px 20px 40px max(24px, calc((100vw - 1080px) / 2 + 24px));
+  min-width: 0;
+  padding: 110px 20px 60px max(24px, calc((100% / 1.05 * 2 - 1080px) / 2 + 24px));
 }
 .hero-text h1 {
   margin: 20px 0 18px;
@@ -254,6 +256,7 @@ section {
 
 .status-tag {
   display: inline-flex;
+  max-width: 100%;
   align-items: center;
   gap: 8px;
   padding: 7px 14px;
@@ -317,29 +320,53 @@ section {
 }
 .chip-b {
   bottom: 20%;
-  left: -4%;
+  left: 4%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    height: auto;
+    min-height: 0;
   }
   .hero-text {
-    padding: 110px 24px 0;
+    padding: 110px 24px 8px;
+  }
+  .hero-text p {
+    max-width: 520px;
   }
   .hero-visual {
-    height: 430px;
+    height: clamp(320px, 90vw, 520px);
   }
   .hero-visual img {
+    right: 50%;
     height: 100%;
+    transform: translateX(50%);
+    object-position: center bottom;
   }
   .chip-a {
-    top: 12%;
+    top: 14%;
+    left: 16px;
   }
   .chip-b {
-    bottom: 16%;
-    left: 0;
+    bottom: 18%;
+    left: auto;
+    right: 16px;
+  }
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-text {
+    padding-inline: 16px;
+  }
+  .status-tag {
+    font-size: 10px;
+  }
+  .float-chip {
+    padding: 7px 11px;
+    font-size: 10px;
   }
 }
 
@@ -958,7 +985,7 @@ section {
   transition: none !important;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .name-track span {
     font-size: clamp(56px, 15vw, 140px);
   }
