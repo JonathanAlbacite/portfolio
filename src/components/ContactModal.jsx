@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { contacts } from '../data/portfolio.js';
 
-// Free key from https://web3forms.com, delivered to the inbox that should receive messages.
-// Put it in a `.env` file as VITE_WEB3FORMS_KEY=... (see .env.example).
-const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
+// Web3Forms access key (https://web3forms.com). It is meant to be public: it only lets this
+// form deliver messages to the inbox it was created for. A VITE_WEB3FORMS_KEY in .env overrides it.
+const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || '171b66bb-1b6e-43e6-bc7f-0736a3414cd1';
 const myEmail = contacts.find((c) => c.label === 'Email').value;
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
