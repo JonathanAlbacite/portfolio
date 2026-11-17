@@ -47,6 +47,24 @@ export const projects = [
       'A clean Scandinavian interior design landing page with layered room photography, featured collections and a simple call to action.',
     image: '/images/projects/kavian-mockup.webp',
   },
+  {
+    title: 'Buylix',
+    description:
+      'A sleek car dealership landing page with a bold hero vehicle, spec callouts, brand filters and a featured-deal card for a trusted, hassle-free buying experience.',
+    image: '/images/projects/buylix-mockup.webp',
+  },
+  {
+    title: "The Archivist's Legacy",
+    description:
+      'My capstone project: a platform that turns classroom lessons into escape-room games. Teachers build campaigns and track results, while students join rooms, play through 3D scenes and level up their progress.',
+    image: '/images/projects/archivist-mockup.webp',
+  },
+  {
+    title: 'Toronto Cupcake',
+    description:
+      'A warm, pink-toned bakery storefront with home and shop pages, featuring box-size pricing, seasonal specials, a delivery promise section and a build-your-box checkout flow.',
+    image: '/images/projects/toronto-cupcake-mockup.webp',
+  },
 ];
 
 // `icon` keys map to components/SkillIcon.jsx
