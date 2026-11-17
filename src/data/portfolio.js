@@ -7,7 +7,7 @@ export const profile = {
   location: 'Iloilo City, PH',
   school: 'Iloilo Science and Technology University',
   schoolShort: 'ISATU',
-  resumeUrl: '#',
+  resumeUrl: '/resume/Jonathan_Albacite_Resume.pdf',
 };
 
 export const navLinks = [

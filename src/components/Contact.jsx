@@ -21,7 +21,9 @@ export default function Contact() {
           </p>
           </Reveal>
           <Reveal delay={400}>
-            <a className="btn" href={profile.resumeUrl}>Download Resume →</a>
+            <a className="btn" href={profile.resumeUrl} download="Jonathan_Albacite_Resume.pdf">
+              Download Resume →
+            </a>
           </Reveal>
         </div>
 
